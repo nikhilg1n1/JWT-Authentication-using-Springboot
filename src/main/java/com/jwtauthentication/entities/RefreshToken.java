@@ -1,6 +1,5 @@
 package com.jwtauthentication.entities;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.PropertyNamingStrategies;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 import jakarta.persistence.*;
@@ -27,7 +26,4 @@ public class RefreshToken {
     @OneToOne
     @JoinColumn(name = "role_id",referencedColumnName = "user_id")
     private UserInfo userInfo;
-
-
-
 }
