@@ -18,11 +18,12 @@ import java.util.Set;
 @Table(name = "user")
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class UserInfo  {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long id;
+    private String id;
 
     @Column(nullable = false)
     private String username;
@@ -38,6 +39,7 @@ public class UserInfo  {
                     inverseJoinColumns = @JoinColumn(name = "role_id")
                     )
     Set<UserRole> userRoles= new HashSet<>();
+
 
 
 }
